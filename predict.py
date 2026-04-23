@@ -22,8 +22,8 @@ x_scaler = joblib.load("x_scaler.joblib")
 y_scaler = joblib.load("y_scaler.joblib")
 
 # ---------- 3. 读取新数据并构造序列 ----------
-# csv文件至少有 config.SEQ_LENGTH+1 行数据
-new_data_path = r"data\vin.csv"
+# !!! csv文件至少有 config.SEQ_LENGTH+1 行数据
+new_data_path = r"testdata\vin.csv"
 new_data = pd.read_csv(new_data_path)
 
 # 保证列顺序与 config.FEATURE_COLS 一致
