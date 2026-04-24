@@ -49,7 +49,6 @@ class TargetScaler:
 
 
 def get_dataframe(data_file_path: str) -> pd.DataFrame:
-    data_file_path = os.path.join(config.DATA_FOLDER, data_file_path)
     data:pd.DataFrame = None
     try:
         if not os.path.exists(data_file_path):

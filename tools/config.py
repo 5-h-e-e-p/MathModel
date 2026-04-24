@@ -1,6 +1,7 @@
 # CNN
-DATA_FOLDER = "testdata"
-DATA_FILE = "vin17_processed.csv"
+DATA_FOLDER = "data"
+TEST_DATA_FOLDER = "testdata"
+DATA_FILE = r"data\vin17_processed.csv"
 SEQ_LENGTH = 10
 FEATURE_COLS = ["totalodometer","chargestatus","totalvoltage","totalcurrent","minvoltagebattery","maxvoltagebattery","mintemperaturevalue","maxtemperaturevalue"]
 TARGET_COLS = ["soc"]

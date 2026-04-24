@@ -2,7 +2,7 @@ import torch
 import numpy as np
 import pandas as pd
 import joblib
-from preprocess import create_sequences
+from tools.preprocess import create_sequences
 from CNN import CNNLSTMAttentionModel
 import config
 
