@@ -1,4 +1,4 @@
-PRED_HORIZON = 360
+PRED_HORIZON = 1
 BEST_MODEL_PATH = f"horizon={PRED_HORIZON}/best_model.pth"
 X_SCALER_PATH = f"horizon={PRED_HORIZON}/x_scaler.joblib"
 Y_SCALER_PATH = f"horizon={PRED_HORIZON}/y_scaler.joblib"
