@@ -66,13 +66,13 @@ def get_dataframe(data_file_path: str) -> pd.DataFrame:
         logger.error(f"获取DataFrame时出错: {e}")
     return data
 
-def create_sequences(data:pd.DataFrame, seq_length:int, feature_cols:list[str], target_cols:list[str]) -> tuple[np.ndarray, np.ndarray]:
+def create_sequences(data, seq_length, feature_cols, target_cols, horizon = config.PRED_HORIZON):
     x_data = data[feature_cols].values
     y_data = data[target_cols].values
     X, y = [], []
-    for i in range(len(data) - seq_length):
+    for i in range(len(data) - seq_length - horizon + 1):   # ← 注意减号
         X.append(x_data[i:i+seq_length])
-        y.append(y_data[i+seq_length])
+        y.append(y_data[i+seq_length + horizon - 1])        # ← 目标后移
     return np.array(X), np.array(y).reshape(-1)
 
 import sys
@@ -108,4 +108,3 @@ def process_csv(input_file, output_file):
 
 if __name__ == "__main__":
     process_csv(r"data\vin17.csv", r"data\vin17_processed.csv")
-    process_csv(r"data\vin1.csv", r"data\vin1_processed.csv")

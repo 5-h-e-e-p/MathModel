@@ -1,0 +1,55 @@
+(.venv) PS D:\MathModel> python .\src\Q1_step2_create_model.py
+INFO | __main__:<module>:102 | 原始数据 X: (1980478, 10, 8), y: (1980478,)
+INFO | __main__:<module>:112 | Train: (1386334, 10, 8), Val: (297072, 10, 8), Test: (297072, 10, 8)
+INFO | __main__:<module>:174 | Epoch  1 | Train Loss: 0.008234 | Val Loss: 0.008038
+INFO | __main__:<module>:174 | Epoch  2 | Train Loss: 0.003897 | Val Loss: 0.007029
+INFO | __main__:<module>:174 | Epoch  3 | Train Loss: 0.003228 | Val Loss: 0.019496
+
+(.venv) PS D:\MathModel> python .\src\Q2_step1_compare_predict_real.py
+INFO | __main__:<module>:105 | 工况划分完成: 高速样本 148552, 低速样本 148520
+INFO | __main__:<module>:106 | 高温样本 151970, 低温样本 145102
+
+(.venv) PS D:\MathModel> python .\src\Q2_step2_error_distribution.py
+INFO | __main__:<module>:95 | 测试集精度: RMSE=2.3005%, MAE=1.7191%, R²=0.9878
+
+(.venv) PS D:\MathModel> python .\src\Q2_step4_comapre_tradintion_model.py
+INFO | __main__:<module>:120 | 传统模型拟合: ΔSOC = -0.000000 * 能量 + -0.0026
+INFO | __main__:<module>:143 | 传统能量模型: RMSE=9.2172%, MAE=4.7075%, R²=0.8041
+INFO | __main__:eval_model:149 | CNNLSTMAttention: RMSE=9.0679%, MAE=5.0396%, R²=0.8104
+INFO | __main__:<module>:154 | ------ 以下为新增传统模型 ------
+INFO | __main__:eval_model:149 | 能量外推模型: RMSE=9.2172%, MAE=4.7075%, R²=0.8041
+SUCCESS | __main__:<module>:169 | 传统能量模型对比图已保存 model_comparison_with_energy_30min.png
+
+(.venv) PS D:\MathModel> python .\src\Q2_step4_comapre_tradintion_model.py
+INFO | __main__:<module>:120 | 传统模型拟合: ΔSOC = -0.000000 * 能量 + -0.0042
+INFO | __main__:<module>:143 | 传统能量模型: RMSE=15.2082%, MAE=8.7125%, R²=0.4668
+INFO | __main__:eval_model:149 | CNNLSTMAttention: RMSE=14.7073%, MAE=8.6701%, R²=0.5014
+INFO | __main__:<module>:154 | ------ 以下为新增传统模型 ------
+INFO | __main__:eval_model:149 | 能量外推模型: RMSE=15.2082%, MAE=8.7125%, R²=0.4668
+SUCCESS | __main__:<module>:169 | 传统能量模型对比图已保存 model_comparison_with_energy_60min.png
+
+(.venv) PS D:\MathModel> python .\src\Q2_step4_comapre_tradintion_model.py
+INFO | __main__:<module>:120 | 传统模型拟合: ΔSOC = -0.000000 * 时间 + -0.0038
+INFO | __main__:<module>:143 | 传统能量模型: RMSE=22.2258%, MAE=15.2161%, R²=-0.1388
+INFO | __main__:eval_model:149 | CNNLSTMAttention: RMSE=21.3943%, MAE=14.7348%, R²=-0.0552
+INFO | __main__:<module>:154 | ------ 以下为新增传统模型 ------
+INFO | __main__:eval_model:149 | 能量外推模型: RMSE=22.2258%, MAE=15.2161%, R²=-0.1388
+SUCCESS | __main__:<module>:169 | 传统能量模型对比图已保存 model_comparison_with_energy_120min.png
+
+(.venv) PS D:\MathModel> python .\src\Q2_step4_comapre_tradintion_model.py
+INFO | __main__:<module>:120 | 传统模型拟合: ΔSOC = -0.000000 * 时间 + -0.0009
+INFO | __main__:<module>:143 | 传统能量模型: RMSE=26.2591%, MAE=20.0751%, R²=-0.5896
+INFO | __main__:eval_model:149 | CNNLSTMAttention: RMSE=25.2521%, MAE=19.3423%, R²=-0.4700
+INFO | __main__:<module>:154 | ------ 以下为新增传统模型 ------
+INFO | __main__:eval_model:149 | 能量外推模型: RMSE=26.2591%, MAE=20.0751%, R²=-0.5896
+SUCCESS | __main__:<module>:169 | 传统能量模型对比图已保存 model_comparison_with_energy_180min.png
+
+(.venv) PS D:\MathModel> python .\src\Q1_step2_create_model.py
+INFO | __main__:<module>:103 | 原始数据 X: (1980119, 10, 8), y: (1980119,)
+INFO | __main__:<module>:113 | Train: (1386083, 10, 8), Val: (297018, 10, 8), Test: (297018, 10, 8)
+INFO | __main__:<module>:175 | Epoch  1 | Train Loss: 0.283935 | Val Loss: 0.507255
+INFO | __main__:<module>:175 | Epoch  2 | Train Loss: 0.256551 | Val Loss: 0.517339
+INFO | __main__:<module>:175 | Epoch  3 | Train Loss: 0.239088 | Val Loss: 0.562700
+INFO | __main__:<module>:175 | Epoch  4 | Train Loss: 0.225312 | Val Loss: 0.600178
+INFO | __main__:<module>:175 | Epoch  5 | Train Loss: 0.214501 | Val Loss: 0.710948
+SUCCESS | __main__:<module>:184 | 最终训练出的模型Val Loss: 0.507254586998524
